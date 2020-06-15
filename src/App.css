@@ -1,38 +1,1723 @@
-.App {
+.container {
   text-align: center;
+  background-color: #1f201b;
+  color: antiquewhite;
+  height: fit-content;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hf {
+  font-family: odisseia, sans-serif;
+}
+.bf {
+  font-family: museoserif, "Times New Roman", Times, s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container::-webkit-scrollbar {
+  display: none;
+}
+/* -----------------------------BackToTop------------------------- */
+.bookNow {
+  background-image: url("./img/book.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 3.2vw;
+  height: 3.1vw;
+  text-align: center;
+  z-index: 10;
+  margin: 0.5vw;
+}
+.backToTop {
+  margin: 0.5vw;
+  background-image: url("./img/up.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 3vw;
+  height: 3.4vw;
+  text-align: center;
+  z-index: 10;
+}
+.back {
+  margin: 0.5vw;
+  background-image: url("./img/back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 3.4vw;
+  height: 3vw;
+  text-align: center;
+  z-index: 10;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttonOverlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0vw 2vw 2vw 0vw;
+
+  cursor: pointer;
+  z-index: 1;
+}
+/* -------------------------------------Footer--------------------- */
+.footerContainer {
+  background-color: #1f201b;
+  height: 20vh;
+}
+.footerSocial {
+  height: 100%;
+  margin: auto auto;
+  width: 50%;
+  font-size: 1vw;
+  text-align: center;
+}
+.footerLogos {
+  height: 5vh;
+  margin: 2vh;
+  display: inline-block;
+}
+
+.footerInput {
+  font-size: 1vw;
+  width: 20vw;
+  height: 4vh;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #1f201b;
+  resize: none;
+}
+.footerAddy {
+  position: absolute;
+  font-size: 1.7vh;
+  margin-top: 12vh;
+  margin-left: 10vw;
+  text-align: left;
+}
+/* ---------------------------------------Navbar----------------------- */
+.navBarContainer {
+  z-index: 5;
+  position: absolute;
+  height: 5vw;
+  width: 45vw;
+  margin-left: 50vw;
+}
+.navBar {
+  margin: auto;
+  display: block;
+  writing-mode: vertical-lr;
+  /*  text-orientation: upright; */
+}
+
+.navGallery,
+.navSwag,
+.navContact,
+.navOtoko,
+.navWatertrade,
+.navLogo {
+  width: 3vw;
+  height: 5vw;
+  margin-top: 2vh;
+  padding: 12px;
+  text-align: left;
+  letter-spacing: 5px;
+  cursor: pointer;
+  font-size: 1vw;
+}
+
+.linkStyle {
+  color: antiquewhite;
+}
+
+.navLogo {
+  /* 
+  margin-top: 1.1vh;
+  */
+  background-color: #686868;
+  height: 10vw;
+  width: auto;
+}
+
+/* -------------------------------Welcome1--------------------------- */
+
+.welcome1 {
+  width: auto;
+  font-family: odisseia, sans-serif;
+}
+
+.welcomeBrand {
+  position: absolute;
+  width: fit-content;
+  margin-left: 50%;
+  margin-top: 5vw;
+}
+.brandText {
+  margin-left: 3vw;
+  position: absolute;
+}
+.welcomeImage {
+  background-image: url("./img/welcome1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  width: 50vw;
+  height: fill;
+}
+.welcomeFooter {
+  position: absolute;
+  background-color: #686868;
+  height: 3.15vw;
+  width: fill;
+  margin-top: -3.15vw;
+}
+
+/* --------------------------Welcome 2------------------------------ */
+.welcome2 {
+  height: 46vw;
+}
+.welcome2Cols {
+  text-align: center;
+  margin: 0 auto;
+  height: 45vw;
+  width: 100%;
+  background-position: -28vh;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  opacity: 0.5;
+}
+.welcome2Col1,
+.welcome2Col2,
+.welcome2Col3,
+.welcome2Col4,
+.welcome2Col5 {
+  display: inline-flex;
+  width: 20%;
+  height: fill;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+}
+.welcome2Col1 {
+  background-image: url("./img/welcome2Watertrade.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.welcome2Col2 {
+  background-image: url("./img/welcome1Otoko.webp");
+  background-size: cover;
+  background-position: center;
+  background-position-x: -20vw;
+  color: #1f201b;
+}
+.welcome2Col3 {
+  background-image: url("./img/welcome2Contact.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #1f201b;
+}
+.welcome2Col4 {
+  background-image: url("./img/welcome2Swag.png");
+  background-size: cover;
+  color: antiquewhite;
+}
+.welcome2Col5 {
+  background-image: url("./img/welcome1Gallery.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: antiquewhite;
+  background-position-x: -4vw;
+}
+
+.welcome2Cols:hover {
+  opacity: 1;
+}
+.welcome2ColsText {
+  writing-mode: vertical-lr;
+  display: inline-block;
+  font-size: 4vw;
+  margin-top: 5vh;
+}
+
+/* ----------------------------------Otoko------------------------ */
+.scrollBar {
+  width: 5%;
+  position: sticky;
+  top: 0;
+}
+.scrollBarContainer {
+  position: absolute;
+}
+.otb1Header {
+  margin-left: -2vw;
+}
+
+.otb1Header,
+.otb2Header,
+.otb3Header,
+.otb4Header,
+.otb5Header {
+  font-size: 0.8vw;
+}
+
+.otoko1 {
+  height: 100vh;
+  background-image: url("./demoImg1.png");
+  background-repeat: no-repeat;
+  background-size: 50vw 100vh;
+  background-position: 50vw;
+}
+.otokoBrandOverlay {
+  color: antiquewhite;
+  z-index: 4;
+}
+.otokoOverlayImg {
+  background-image: url("./img/otokoOverlay1.jpg");
+  background-size: contain;
+  position: relative;
+  z-index: 3;
+}
+
+.otoko1UndelayImg {
+  position: absolute;
+  background-image: url("./img/otokoUnderlay2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  margin-left: 50vw;
+  float: left;
+  z-index: 0;
+}
+.otoko2 {
+  height: 47vw;
+  background-color: #1f201b;
+}
+
+.otokoImg1 {
+  width: auto;
+  margin: auto;
+}
+.otoko2img {
+  background-image: url("./img/otoko2.jpg");
+  background-position-y: -5vw;
+  background-size: cover;
+  position: absolute;
+  height: 47vw;
+  width: 50vw;
+  padding-right: -17px;
+}
+.otokoBG1 {
+  position: absolute;
+  height: 100vh;
+  margin-left: 50vw;
+  margin-top: 0vh;
+}
+
+.otokoTextBox1C {
+  height: 100vh;
+  width: 49.12vw;
+  float: right;
+}
+
+.otokoTextBox1C {
+  margin-top: auto;
+}
+.otokoTextBox1 {
+  margin: 15vw 8vh 20vw 8vh;
+  height: fill;
+}
+.otb1Header,
+.otb4Header {
+  float: left;
+}
+.otb1Text {
+  margin-top: 15vh;
+  text-align: left;
+}
+.otb1 {
+  font-size: 1vw;
+}
+
+.otoko3 {
+  height: fit-content;
+  background-color: #1f201b;
+}
+.otoko3Container {
+  height: 46vw;
+  width: 78.5vw;
+  margin: auto;
+  position: relative;
+}
+.otokoTextBox3 {
+  height: 80vh;
+  width: 50vw;
+}
+.otb3Header {
+  margin-top: 10vh;
+  margin-right: 5vh;
+  float: right;
+}
+.o3imgC {
+  /* parallax? */
+  height: 46vw;
+  width: 30vw;
+  background-image: url("./img/otoko3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+}
+.otb3 {
+  text-indent: 3vw;
+  margin: 25vh 8vw 10vh 8vw;
+  font-size: 1vw;
+  text-align: right;
+}
+.bioImg1 {
+  position: absolute;
+  background: url("./img/bioImgTall.jpg") no-repeat center;
+  background-size: cover;
+  height: 30vw;
+  width: 20vw;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.imgPairContainer {
+  height: 36vw;
+  width: 42vw;
+}
+.bioImg2 {
+  background: url("./img/bioImg1.jpg") no-repeat center;
+  background-size: cover;
+  background-position-x: 6vw;
+  margin: 0.7vw;
+  height: 18vw;
+  width: 46vw;
+  right: 0;
+}
+.bioImg3 {
+  background: url("./img/bioImg2.jpg") no-repeat center;
+  background-size: cover;
+  background-position-x: 12vw;
+  margin: 0.7vw;
+  height: 18vw;
+  width: 46vw;
+  right: 0;
+}
+
+.o3img {
+  position: relative;
+  float: left;
+  width: 41vw;
+  height: 80vh;
+}
+.o3imgPadding {
+  position: absolute;
+  margin-left: -5vw;
+  margin-top: 2vw;
+}
+
+.otoko4 {
+  background-color: #1f201b;
+  height: 50vh;
+  width: 100vw;
+}
+.otokoTextBox4 {
+  height: fit-content;
+  width: 45vw;
+  float: right;
+}
+.otb4Text {
+  margin-top: 20vh;
+  margin-right: 10vw;
+  float: right;
+  width: 30vw;
+  font-size: 1vw;
+  text-align: right;
+}
+.otb4Header {
+  margin-top: 3vw;
+}
+
+.otoko5 {
+  height: 49vw;
+  background-color: #1f201b;
+  margin: auto;
+}
+.otokoContainer5 {
+  position: relative;
+  height: 70%;
+  width: 78.5vw;
+  margin: auto;
+  padding-top: 5vw;
+}
+
+.otoko5HeaderContainer {
+  position: absolute;
+  width: 100%;
+}
+.otoko5Row {
+  margin-top: 5vw;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: 30vw;
+  width: 78vw;
+}
+.otoko2Col1,
+.otoko2Col2,
+.otoko2Col3 {
+  display: inline-block;
+  width: 33.3%;
+}
+.otoko2Col1 {
+  background: url("./img/otokoWine.png") no-repeat center;
+  background-size: cover;
+  opacity: 0.7;
+}
+.otoko2Col2 {
+  background: url("./img/otokoSake.png") no-repeat center;
+  background-size: cover;
+  background-position: right;
+  opacity: 0.7;
+  background-color: #1f201b;
+  color: #1f201b;
+}
+.otoko2Col3 {
+  background: url("./img/otokoTea.jpg") no-repeat center;
+  background-size: cover;
+  opacity: 0.7;
+  background-color: #1f201b;
+  color: #1f201b;
+}
+
+.otoko2Cols {
+  text-align: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: 100vh;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+.otoko2Cols:hover {
+  opacity: 1;
+}
+.otoko2ColsText {
+  writing-mode: vertical-lr;
+  display: inline-block;
+  font-size: 4vw;
+  margin-top: 4vw;
+}
+.otokoDrinksHeader {
+  height: fit-content;
+  width: 40vw;
+  margin: auto;
+  font-size: 1vw;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.o5dhl1,
+.o5dhl2 {
+  display: inline;
+}
+
+/* ----------------------------------Watertrade----------------------------- */
+
+.watertradeContainer {
+  background-color: #1f201b;
+  width: 100%;
+  color: antiquewhite;
+  font-size: 0.8vw;
+  font-style: normal;
+  font-weight: 400;
+
+  font-family: museoserif, "Times New Roman", Times, serif;
+}
+.watertradeNavbar {
+  position: left;
+}
+
+.waterCenterFold {
+  background-image: url("./demoImg1.png");
+  width: 50vw;
+  height: 50vw;
+}
+
+.water1 {
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.water1UndelayImg {
+  position: absolute;
+  background-image: url("./img/water1BG.jpg");
+  background-size: cover;
+  float: right;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 50vw;
+  margin-left: auto;
+  right: 0;
+  z-index: 1;
+}
+.waterImg1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.waterOverlayImg {
+  background-image: url("./img/water1Over.jfif");
+  background-size: cover;
+  background-position-x: -5vw;
+  position: relative;
+  z-index: 2;
+}
+.waterBrandOverlay {
+  font-size: 3.5vw;
+  height: auto;
+  width: auto;
+  color: antiquewhite;
+  position: absolute;
+  z-index: 10;
+}
+/* ---------------------------------Water2---------------------- */
+
+.water2 {
+  padding: 8vw;
+  height: 47vw;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.water2Container {
+  height: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
 }
 
-.App-link {
-  color: #61dafb;
+.waterImgGrid1 {
+  margin: auto;
+  display: block;
+  writing-mode: vertical-lr;
+  text-align: center;
+}
+.waterImgGrid2 {
+  position: absolute;
+  left: 50%;
+  margin-left: -20vw;
+  bottom: 0;
+  display: block;
+  writing-mode: vertical-lr;
+  text-align: center;
+}
+.water2Col1 {
+  width: 10vw;
+  height: 10vw;
+  background-image: url("./demoImg1.png");
+  background-size: cover;
+  background-position: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.water2TextBox {
+  margin: auto;
+  position: absolute;
+  height: 9vw;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.water2Col2 {
+  margin-bottom: 0vh;
+  width: 10vw;
+  height: 10vw;
+  background-size: cover;
+}
+
+.c1 {
+  background-image: url("./img/c1.jfif");
+}
+.c2 {
+  background-image: url("./img/c2.jpg");
+  background-position: right;
+}
+.c3 {
+  background-image: url("./img/c3.jpg");
+}
+.c4 {
+  background-image: url("./img/c4.jpg");
+}
+.c5 {
+  background-image: url("./img/c5.jpg");
+}
+.c6 {
+  background-image: url("./img/c6.jpg");
+}
+.c7 {
+  background-image: url("./img/c7.jfif");
+}
+.c8 {
+  background-image: url("./img/c8.jpg");
+}
+
+.water2Text {
+  margin: auto;
+  position: absolute;
+  height: fit-content;
+  width: 55vw;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1vw;
+}
+.water2TextHeader {
+  font-size: 0.5vw;
+  margin-bottom: 1vw;
+  font-family: odisseia, sans-serif;
+}
+
+/* --------------------------------Water3-------------------------- */
+
+.water3 {
+  position: relative;
+  padding: 0vw 5vw 5vw 5vw;
+  height: 40vw;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.water3RightContainer {
+  float: right;
+  position: relative;
+  width: 45vw;
+  height: 38vw;
+}
+.water3LeftContainer {
+  position: relative;
+  width: 45vw;
+  height: 38vw;
+}
+.rickyContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.rickyProfile {
+  background-repeat: no-repeat;
+  background-position: right;
+  background-image: url("./img/rickyProfile.jpg");
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+}
+.whitneyProfile {
+  background-repeat: no-repeat;
+  background-position: right;
+  background-image: url("./img/whitneyProfile.jfif");
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+}
+
+.profileContainer {
+  width: 39vw;
+  height: 30vw;
+  position: absolute;
+  margin: auto;
+  position: absolute;
+  top: -2vw;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.rickyText {
+  position: relative;
+  text-align: right;
+  margin-top: 5vw;
+  margin-left: 5vw;
+  width: 18vw;
+}
+
+.rickyHeader {
+  position: absolute;
+  width: 29vw;
+  text-align: right;
+  font-size: 1.5vw;
+  top: 75%;
+  z-index: 3;
+  font-family: odisseia, sans-serif;
+}
+
+/*  */
+.whitneyContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.whitneyText {
+  margin-top: 5vw;
+  margin-right: 22vw;
+  margin-left: 22vw;
+  width: 18vw;
+}
+
+.whitneyHeader {
+  position: absolute;
+  width: 28vw;
+  text-align: right;
+  font-size: 1.5vw;
+  top: 75%;
+  z-index: 3;
+  font-family: odisseia, sans-serif;
+}
+
+/* --------------Water 4-------------------------------------------- */
+.water4 {
+  padding: 4vw 5vw 3vw 5vw;
+  height: 60vw;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.water4container {
+  height: 100%;
+}
+
+.water4header {
+  font-family: odisseia, sans-serif;
+  text-align: center;
+  font-size: 0.9vw;
+}
+.water4Text {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.8vw;
+  width: 65vw;
+}
+.water4Selections {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.8vw;
+  width: 65vw;
+  margin-bottom: 2vw;
+}
+
+.water4WhiskeyContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.whisky1,
+.whisky2,
+.whisky3,
+.whisky4 {
+  width: 22.5vw;
+  text-align: center;
+  height: 30vw;
+  margin: 0 0.2vw;
+}
+
+.whiskyImg {
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+  margin: 0 auto;
+  height: 20vw;
+  width: 18vw;
+}
+.w1 {
+  background-image: url("./img/w1.jpg");
+}
+.w2 {
+  background-image: url("./img/w2.jpg");
+}
+.w3 {
+  background-image: url("./img/w3.jpg");
+}
+.w4 {
+  background-image: url("./img/w4.jpg");
+  background-color: whitesmoke;
+}
+.whiskyHeader {
+  text-align: left;
+  margin: 0.5vw 1.75vw;
+  font-size: 1.1vw;
+}
+.whiskyTags {
+  text-align: left;
+  margin-left: 1.8vw;
+  margin-bottom: 0.9vw;
+}
+
+.tag {
+  text-align: left;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.1vw 0.8vw;
+  margin: 0 0.1vw;
+  width: auto;
+  opacity: 0.8;
+  font-size: 0.8vw;
+}
+.whiskyDescription {
+  margin-left: 1.8vw;
+  text-align: left;
+  width: 18.1vw;
+}
+.waterLogo {
+  height: 2vw;
+  display: inline-block;
+  position: absolute;
+  margin: 0.15vw 0.5vw;
+}
+/* ----------------------------------SWAG-------------------------- */
+.swagContainer {
+  background-color: #1f201b;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.swag1 {
+  color: antiquewhite;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.globalUnderlay {
+  z-index: 1;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1f201b;
+  opacity: 0.5;
+}
+.swagCol1 {
+  background: url("./img/swagKnife.jfif") no-repeat center;
+  background-size: cover;
+  color: #1f201b;
+  height: 46.1vw;
+}
+.swagCol2 {
+  background: url("./img/swagWear.jpg") no-repeat center;
+  background-size: cover;
+  color: #1f201b;
+  height: 46.1vw;
+}
+.swagCol3 {
+  background: url("./img/swagDrink.jpg") no-repeat center;
+  background-size: cover;
+  color: #1f201b;
+  height: 46.1vw;
+}
+.swagCol4 {
+  background: url("./img/swagLive.jpg") no-repeat center;
+  background-size: cover;
+  height: 46.1vw;
+  color: #1f201b;
+}
+.swagCol5 {
+  height: 46.1vw;
+  background: url("./img/swagSet.jpg") no-repeat center;
+  background-size: cover;
+  color: #1f201b;
+}
+
+.overlayContainer,
+.wearOverlayContainer,
+.drinkOverlayContainer,
+.liveOverlayContainer {
+  z-index: 2;
+  position: absolute;
+  height: 35vw;
+  width: 70vw;
+  background-color: #1f201b;
+
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.water4OverlayContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.swagOverlay {
+  font-size: 5vw;
+  padding-left: 0.6vw;
+  height: fit-content;
+}
+
+.overlayExit {
+  z-index: 10;
+  background-color: grey;
+  position: absolute;
+  margin-top: -3vw;
+  padding-top: 0.2vw;
+  color: antiquewhite;
+  text-decoration: none;
+  height: 1.7vw;
+  width: 4vw;
+  font-size: 1vw;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  top: -35vw;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.overlay1 {
+  position: relative;
+  background-color: #1f201b;
+  width: 100%;
+  text-align: center;
+  height: 35vw;
+  padding: 2vw;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.overlay1Container {
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60vw;
+  height: 100%;
+  margin: auto;
+}
+.overlayImg {
+  position: relative;
+  height: 15.5vw;
+  width: 19vw;
+  cursor: pointer;
+  border: 0.05vw grey solid;
+}
+
+.overlayImg1 {
+  background: url("./img/1.jpg") no-repeat center;
+}
+.overlayImg2 {
+  background: url("./img/2.jpg") no-repeat center;
+}
+.overlayImg3 {
+  background: url("./img/3.jpg") no-repeat center;
+}
+.overlayImg4 {
+  background: url("./img/4.jpg") no-repeat center;
+}
+.overlayImg5 {
+  background: url("./img/5.jpg") no-repeat center;
+}
+
+.overlayImg6 {
+  background: url("./img/6.webp") no-repeat center;
+}
+.overlayImg1,
+.overlayImg2,
+.overlayImg3,
+.overlayImg4,
+.overlayImg5,
+.overlayImg6 {
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 12.1vw;
+  width: 12.1vw;
+  position: absolute;
+  background-size: cover;
+}
+.overlayImgSet1,
+.overlayImgSet2,
+.overlayImgSet3,
+.overlayImgSet4,
+.overlayImgSet5,
+.overlayImgSet6 {
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 12.1vw;
+  width: 12.1vw;
+  position: absolute;
+}
+
+.overlayImgSet1 {
+  background: url("./img/01.jpg") no-repeat center;
+  background-size: cover;
+}
+.overlayImgSet2 {
+  background: url("./img/02.jpg") no-repeat center;
+  background-size: cover;
+}
+.overlayImgSet3 {
+  background: url("./img/03.jpg") no-repeat center;
+  background-size: cover;
+}
+.overlayImgSet4 {
+  background: url("./img/04.jpg") no-repeat center;
+  background-size: cover;
+}
+.overlayImgSet5 {
+  background: url("./img/05.jpg") no-repeat center;
+  background-size: cover;
+}
+.overlayImgSet6 {
+  background: url("./img/06.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.overlayText {
+  position: absolute;
+  margin: auto;
+  position: absolute;
+  height: 2vw;
+  width: 10vw;
+  top: 12vw;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 0.7vw;
+}
+.overlayHeader {
+  text-align: left;
+  margin: 0.5vw 1.75vw;
+  font-size: 1.1vw;
+}
+.overlayTags {
+  text-align: left;
+  margin-left: 1.8vw;
+  margin-bottom: 0.9vw;
+}
+
+.tag {
+  text-align: left;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.1vw 0.8vw;
+  margin: 0 0.1vw;
+  width: auto;
+  opacity: 0.8;
+  font-size: 0.8vw;
+}
+.overlayDescription {
+  margin-left: 1.8vw;
+  text-align: left;
+  width: 18.1vw;
+  font-size: 1vw;
+}
+
+.waterLogo {
+  height: 2vw;
+  display: inline-block;
+  position: absolute;
+  margin: 0.15vw 0.5vw;
+}
+/* ------------------------------flipped------------------------ */
+
+.flipped {
+  height: 35vw;
+  margin-top: -2vw;
+  margin-left: -2vw;
+  width: 70vw;
+  padding: 4vw 5vw 4vw 5vw;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+  background-image: url("./demoImg1.png");
+  background-size: 25vw;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.backButton {
+  position: absolute;
+  float: left;
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: antiquewhite;
+  margin: -2vw -3vw;
+  cursor: pointer;
+}
+.flippedHeader {
+  margin: 1.5vw 2.5vw;
+  font-size: 1.1vw;
+  width: 28vw;
+}
+.flippedDescription {
+  margin: auto;
+  position: absolute;
+  width: 15vw;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 43vw;
+  height: 7vw;
+  font-size: 0.8vw;
+}
+
+.flippedTag {
+  float: left;
+  margin-left: -2.5vw;
+  margin-top: -1vw;
+  background-color: #1f201b;
+  border: 1px solid antiquewhite;
+}
+
+.addToCart {
+  margin: auto;
+  position: absolute;
+  top: 30vw;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1.5vw;
+  width: 19vw;
+  border-radius: 5px;
+  font-size: 0.9vw;
+  background-color: grey;
+  border: 1px solid antiquewhite;
+  color: antiquewhite;
+  cursor: not-allowed;
+}
+.flippedAddToCart {
+  width: 25vw;
+  margin-left: 22.5vw;
+}
+.flippedRow {
+  display: flex;
+  direction: row;
+  margin: 0.2vw;
+}
+.flippedTable {
+  width: 30vw;
+  height: fit-content;
+  position: absolute;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 49vw;
+  bottom: 0;
+  right: 0;
+}
+.flippedColHeader {
+  width: 8vw;
+  font-size: 0.8vw;
+  background-color: grey;
+  text-align: center;
+}
+.flippedColContent {
+  background-color: grey;
+  opacity: 0.8;
+  width: 10vw;
+  font-size: 0.8vw;
+}
+/* ----------------------------------------------WearOverlay--------------------------- */
+.wearOverlayContainer {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.wearOverlay {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.wearGrid {
+  width: fill;
+  height: 35vw;
+  text-align: center;
+  position: relative;
+}
+.wearGridContainer {
+  height: 100%;
+}
+.wear1Flip,
+.wear1NoFlip {
+  z-index: 1;
+  position: absolute;
+  height: fill;
+  width: fill;
+}
+.colorUnderlay {
+  position: absolute;
+  height: 15vw;
+  width: 14vw;
+  margin-top: -18.5vw;
+  margin-left: 2vw;
+}
+
+.wear1Flip,
+.wear2Flip,
+.wear3Flip,
+.wear4Flip {
+  z-index: 2;
+}
+
+.wearFlipUnderlay {
+  z-index: 1;
+  opacity: 0.7;
+  background-color: #1f201b;
+  position: absolute;
+  height: 35vw;
+  width: 70vw;
+}
+
+.wNFLogoContainer {
+  width: 7.2vw;
+  height: 2vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: auto;
+  margin-bottom: 1vw;
+  text-align: center;
+}
+.wNFlogo {
+  background: url("./logo.png") no-repeat center center;
+  background-size: cover;
+  height: 2vw;
+  width: 2vw;
+  margin: auto 0.2vw;
+  cursor: pointer;
+}
+#logoInv {
+  background: url("./logoInv.png") no-repeat center center;
+  background-size: cover;
+}
+#logoLetter {
+  background: url("./otoko.png") no-repeat center center;
+  background-size: cover;
+}
+.wNFColors {
+  display: flex;
+  flex-direction: row;
+  width: 13vw;
+  margin: auto;
+  width: fit-content;
+}
+.colorDiv {
+  height: 1vw;
+  width: 1vw;
+  margin: 0.3vw;
+  cursor: pointer;
+  border: 0.05vw antiquewhite solid;
+}
+
+.wearAddToCart {
+  width: 12vw;
+  margin-bottom: 2vw;
+  cursor: not-allowed;
+  border: none;
+}
+.wNFImg1,
+.wNF2Img1,
+.wNF3Img1,
+.wNF4Img1,
+.wNF4ImgApron1,
+.wNF4ImgApron2 {
+  display: inline-block;
+  background: url("./demoImg1.png") repeat center center;
+  background-size: cover;
+  height: 35vw;
+  width: 8.75vw;
+  transition: 0.3s ease-out;
+  display: inline-block;
+}
+
+.wNFImg2,
+.wNF2Img2,
+.wNF3Img2,
+.wNF4Img2 {
+  display: inline-block;
+  background: url("./demoImg1.png") repeat center center;
+  background-size: cover;
+  height: 35vw;
+  width: 8.75vw;
+  transition: 0.3s ease-out;
+  display: inline-block;
+}
+.wear1NoFlip:hover .wNFImg1 {
+  background-position-y: 7vw;
+}
+.wear1NoFlip:hover .wNFImg2 {
+  background-position-y: 10vw;
+}
+
+.wear2NoFlip:hover .wNF2Img1 {
+  background-position-y: 7vw;
+}
+.wear2NoFlip:hover .wNF2Img2 {
+  background-position-y: 10vw;
+}
+
+.wear3NoFlip:hover .wNF3Img1 {
+  background-position-y: 7vw;
+}
+.wear3NoFlip:hover .wNF3Img2 {
+  background-position-y: 10vw;
+}
+
+.wear4NoFlip:hover .wNF4Img1 {
+  background-position-y: 7vw;
+}
+.wear4NoFlip:hover .wNF4Img2 {
+  background-position-y: 10vw;
+}
+.wear4NoFlip:hover .wNF4ImgApron1 {
+  background-position-y: 0vw;
+}
+.wear4NoFlip:hover .wNF4ImgApron2 {
+  background-position-y: 6vw;
+}
+
+.wNF4Img1 {
+  background: white url("./img/apron1.png") no-repeat center;
+  background-size: contain;
+}
+.wNF4Img2 {
+  background: white url("./img/apron2.png") no-repeat center;
+  background-size: contain;
+}
+
+.wNF4ImgApron1 {
+  background: white url("./img/apron1.png") no-repeat right;
+  background-size: contain;
+}
+.wNF4ImgApron2 {
+  background: white url("./img/apron2.png") no-repeat center;
+  background-size: 23vw;
+  background-position-x: -11.6vw;
+}
+
+.wear1NFHeader {
+  position: absolute;
+  width: 100%;
+}
+.wNFImg1 {
+  background: white url("./img/wTT.png") no-repeat center;
+  background-size: contain;
+}
+.wNFImg2 {
+  background: white url("./img/mTT.png") no-repeat center;
+  background-size: contain;
+}
+.wNF2Img1 {
+  background: white url("./img/lettermanJacket.png") no-repeat center;
+  background-size: contain;
+}
+.wNF2Img2 {
+  background: white url("./img/denimJacket.png") no-repeat center;
+  background-size: contain;
+}
+
+.wNFpatch {
+  display: inline-block;
+  background: white url("./demoImg1.png") no-repeat center center;
+  background-size: cover;
+  height: 35vw;
+  width: 4.375vw;
+  transition: 0.3s ease-out;
+  display: inline-block;
+}
+.wNFpatch:hover {
+  background-position-y: 5vw;
+}
+
+.patchDesc {
+  width: 90%;
+  font-size: 0.7vw;
+  margin: auto;
+}
+
+.patch1 {
+  background: white url("./img/p1.png") no-repeat center;
+  background-size: 15vw;
+}
+.patch2 {
+  background: white url("./img/p3.png") no-repeat center;
+  background-size: 15vw;
+}
+.patch3 {
+  background: white url("./img/p2.png") no-repeat center;
+  background-size: 15vw;
+}
+.patch4 {
+  background: white url("./img/p4.png") no-repeat center;
+  background-size: 15vw;
+}
+.backward,
+.forward {
+  font-size: 2vw;
+  margin: auto;
+  cursor: pointer;
+  height: 2vw;
+}
+.wNFImg,
+.testImg {
+  height: 18vw;
+  width: 14w;
+  position: relative;
+  z-index: 14;
+  margin: 01.8vw 0.8vw;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* --------------------------------DrinksOverlay-------------------------- */
+.drinksOverlay {
+  height: fill;
+  width: fill;
+  padding: 2vw;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.menuToggleContainer {
+  margin-top: 3vw;
+  position: relative;
+  height: fit-content;
+  width: 100%;
+}
+.menuToggle {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: fit-content;
+  width: fit-content;
+  border: 0.05vw antiquewhite solid;
+  border-radius: 0.2vw;
+}
+.toggleOverlay {
+  z-index: 2;
+  position: absolute;
+  margin-top: -1vw;
+  background-color: #525252;
+  height: 0.8vw;
+  width: 2vw;
+  border-radius: 0.2vw;
+  transition: all 1s ease-in-out; /* add this here */
+}
+.menuWine,
+.menuSake {
+  z-index: 3;
+  position: relative;
+  height: fit-content;
+  width: 2vw;
+  font-size: 0.6vw;
+  text-align: center;
+  display: inline-block;
+  border-radius: 0.2vw;
+  margin: 0.2vw;
+}
+
+.drinksWineContainer {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.drinkHeader {
+  position: absolute;
+  margin-top: -1.3vw;
+}
+.drinksWine,
+.drinksSake,
+.drinksPrice {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.orange,
+.white,
+.sparkling,
+.red {
+  font-size: 0.7vw;
+  height: 13vw;
+  width: fill;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0vw 0.5vw;
+}
+.drinksItem {
+  position: relative;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  line-height: 1vw;
+  height: fill;
+  padding: 0.6vw 0vw 0.5vw 0vw;
+}
+.drinksItem:hover {
+  background-color: #2e2e2e;
+  background-image: url("./add.png");
+  background-position-y: 21vw;
+  background-size: 1vw;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.sparkling,
+.orange,
+.white,
+.red {
+  height: 24vw;
+  width: fit-content;
+  margin: 0vw 1vw 0vw 0vw;
+}
+.red {
+  margin-right: 0vw;
+}
+.sparkling {
+  border: 0.01vw solid skyblue;
+}
+.orange {
+  border: 0.01vw solid orange;
+}
+.white {
+  border: 0.01vw solid yellow;
+}
+.red {
+  border: 0.01vw solid crimson;
+}
+.nama {
+  border: 0.01vw solid teal;
+}
+.nigori {
+  border: 0.01vw solid Cornsilk;
+}
+.ginjo {
+  border: 0.01vw solid DarkOrchid;
+}
+.daiginjo {
+  border: 0.01vw solid DarkRed;
+}
+
+.winePrice {
+  margin: auto;
+  position: absolute;
+  top: 21vw;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  height: 2vw;
+}
+/* ----------------------------------------live overlay ----------------------- */
+
+.binchotanImg {
+  height: 10vw;
+}
+.binchotanTextContainer {
+  display: block;
+  margin: 1vw;
+}
+.binchotanHeader {
+  font-size: 0.9vw;
+  margin-bottom: 0.5vw;
+}
+.binchotanText {
+  font-size: 0.7vw;
+}
+.darumaImg1 {
+  background: url("./img/daruma1Half.png");
+  background-size: 10vw;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.darumaImg2 {
+}
+
+.darumaImg1 :hover {
+  background-color: lawngreen;
+  height: 10vw;
+}
+.darumaImg2 :hover {
+  background-color: lawngreen;
+}
+/* ----------------------------------------Set overlay ----------------------- */
+.listContent {
+  text-align: left;
+}
+.listContentItem {
+  margin-left: -0.5vw;
+  font-size: 0.7vw;
+  width: 8vw;
+  padding-left: 0px;
+  padding: 0vw;
+  margin: 0vw;
+  padding-inline-start: -40px;
+}
+
+/* -----------------------------------------Gallery Container------------------- */
+
+.galleryContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: indigo;
+  position: relative;
+}
+
+.galleryMain {
+  background-color: hotpink;
+  width: 100vw;
+  height: 46.27vw;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

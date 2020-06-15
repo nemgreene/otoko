@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.png";
+import brand from "./otoko.png";
+import "./App.css";
+import { Col, Row } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import Welcome from "./components/welcome";
+import Otoko from "./components/otokoComponent";
+import WaterTrade from "./components/watertradeComponent";
+import Contact from "./components/contactComponent";
+import Swag from "./components/swagComponent";
+import Gallery from "./components/galleryComponent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Welcome />
+          </Route>
+          <Route path="/otoko">
+            <Otoko />
+          </Route>
+          <Route path="/watertrade">
+            <WaterTrade />
+          </Route>
+          <Route path="/swag">
+            <Swag />
+          </Route>
+          <Route path="/gallery" component={Gallery} />
+        </Switch>
+      </Router>
     </div>
   );
 }
-
 export default App;
